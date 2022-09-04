@@ -2,7 +2,7 @@
 
 ## This flowable springboot application uses the following technologies:
 - Java version 11
-- Spring Boot Start Parent 2.6.3
+- Spring Boot Start Parent 2.7.3
 - Flowable Spring Boot Start 6.7.2
 
 ## Current worrkflow for testing workflow
