@@ -48,12 +48,12 @@ public class FlowableTriggerableCustomServiceTaskApplicationTests {
     ProcessInstance processInstance = this.runtimeService.startProcessInstanceByKey("multiTaskProcess", variables);
 
     // Check if triggerable custom service task was reached
-    await().atMost(30L, TimeUnit.SECONDS).until(
+    /*await().atMost(30L, TimeUnit.SECONDS).until(
         () -> this.runtimeService.createExecutionQuery()
         .activityId("service1")
         .processInstanceId(processInstance.getProcessInstanceId())
         .singleResult() != null
-    );
+    );*/
 
 //    //    Check the value of the count var before the trigger
 //    HistoricVariableInstance historicVariableInstance = this.historyService.createHistoricVariableInstanceQuery()
