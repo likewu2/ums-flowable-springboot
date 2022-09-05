@@ -39,7 +39,7 @@ public class FlowableTriggerableCustomServiceTaskApplicationTests {
   void testTriggereableCustomerServiceTask(){
 
     // Pull a person from personRepository
-    Person person = personRepository.findByUsername("PEDROSORTO");
+    Person person = personRepository.findByUsername("estyl");
 
     Map<String, Object> variables = new HashMap<String, Object>();
     variables.put("person", person);
@@ -48,12 +48,12 @@ public class FlowableTriggerableCustomServiceTaskApplicationTests {
     ProcessInstance processInstance = this.runtimeService.startProcessInstanceByKey("multiTaskProcess", variables);
 
     // Check if triggerable custom service task was reached
-    /*await().atMost(30L, TimeUnit.SECONDS).until(
+    await().atMost(30L, TimeUnit.SECONDS).until(
         () -> this.runtimeService.createExecutionQuery()
-        .activityId("service1")
+        .activityId("assignService")
         .processInstanceId(processInstance.getProcessInstanceId())
         .singleResult() != null
-    );*/
+    );
 
 //    //    Check the value of the count var before the trigger
 //    HistoricVariableInstance historicVariableInstance = this.historyService.createHistoricVariableInstanceQuery()
